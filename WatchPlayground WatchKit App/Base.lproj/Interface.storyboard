@@ -11,17 +11,34 @@
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchPlayground_WatchKit_App" customModuleProvider="target">
                     <items>
                         <label width="136" height="19.5" alignment="left" text="Accelerometer" textAlignment="center" id="C0o-n4-RtW"/>
-                        <label width="61.5" height="17.5" alignment="left" text="X:" id="Pey-kL-1WV"/>
-                        <label width="60" height="18.5" alignment="left" text="Y:" id="lSM-xy-pp3"/>
-                        <label width="62.5" height="19.5" alignment="left" text="Z:" id="mBQ-C4-uwA"/>
+                        <label width="136" height="17.5" alignment="left" text="X:" id="Pey-kL-1WV"/>
+                        <label width="136" height="18.5" alignment="left" text="Y:" id="lSM-xy-pp3"/>
+                        <label width="136" height="19.5" alignment="left" text="Z:" id="mBQ-C4-uwA"/>
                         <button width="1" alignment="left" title="Do Cool Stuff" id="8vk-Ks-n7y">
-                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="doCoolStuffTapped:" destination="AgC-eL-Hgc" id="PPb-9F-R3u"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" hidden="YES" title="Stop Cool Stuff" id="EG3-cw-UFQ">
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="stopCoolStuffTapped:" destination="AgC-eL-Hgc" id="GvP-KH-yvN"/>
+                            </connections>
                         </button>
                     </items>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="accelerometerAvailable" destination="C0o-n4-RtW" id="yPL-Xj-8dp"/>
+                        <outlet property="doCoolStuff" destination="8vk-Ks-n7y" id="EZG-Ma-ZMN"/>
+                        <outlet property="stopCoolStuff" destination="EG3-cw-UFQ" id="Y9q-qF-mn0"/>
+                        <outlet property="xValLabel" destination="Pey-kL-1WV" id="Jik-Lx-TRz"/>
+                        <outlet property="yValLabel" destination="lSM-xy-pp3" id="Zrz-kJ-ADB"/>
+                        <outlet property="zValLabel" destination="mBQ-C4-uwA" id="tX0-WG-ufR"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="220" y="344.5"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
